@@ -47,3 +47,18 @@ void ListImpl::Reverse() {
 
 	head = r;
 }
+
+int ListImpl::ListSize() {
+	int count = 0;
+	if (head == nullptr) {
+		cout << "List is empty" << endl;
+	}
+
+	ListNode *tmp = head;
+	while (tmp != nullptr) {
+		++count;
+		tmp = tmp->next;
+	}
+	
+	return count;
+}
