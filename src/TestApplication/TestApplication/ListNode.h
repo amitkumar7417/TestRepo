@@ -22,12 +22,8 @@ public:
 		//Assignment Oprerator
 	}
 
-	ListNode(ListNode && l) {
-		//Move Constructor
-	}
-
-	ListNode& operator=(ListNode &&l) {
-		//Move Assignment Operator
-	}
+	ListNode(ListNode && l) = delete;
+	ListNode& operator=(ListNode &&l) = delete;
+	
 
 };
