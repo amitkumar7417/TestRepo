@@ -15,4 +15,5 @@ public:
 	void Insert(int val);
 	void Display();
 	void Reverse();
+	int ListSize();
 };
