@@ -62,28 +62,3 @@ int ListImpl::ListSize() {
 	
 	return count;
 }
-
-int ListImpl::FindMiddleOfList() {
-
-	if (head == nullptr) {
-		cout << "Empty Linked List" << endl;
-		return -1;
-	}
-
-	//Use slowptr(step one node at a time) and fastptr(step two node at a time)
-	//When fastprt pointing to the last node or beyond, slowptr will be pointing to the middle of the node.
-	ListNode *slowptr = nullptr, *fastptr = nullptr;
-	slowptr = head;
-	fastptr = head;
-	while (slowptr && fastptr) {
-
-		fastptr = fastptr->next;
-		if (!fastptr)
-			break;
-
-		fastptr = fastptr->next;
-		slowptr = slowptr->next;		
-	}
-
-	return slowptr->data;
-}
