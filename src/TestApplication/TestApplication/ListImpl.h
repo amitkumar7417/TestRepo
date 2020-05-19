@@ -16,4 +16,5 @@ public:
 	void Display();
 	void Reverse();
 	int ListSize();
+	int FindMiddleOfList();
 };
