@@ -62,3 +62,40 @@ int ListImpl::ListSize() {
 	
 	return count;
 }
+
+bool ListImpl::DeleteNode(int val) {
+
+	if (head == nullptr) {
+		cout << "List is empty" << endl;
+		return false;
+	}
+
+	//Find the node to be deleted
+	ListNode *tmp = head,*prev = nullptr;
+	
+	while (tmp != nullptr) {
+		if (tmp->data == val) {
+			if (tmp == head) {
+				//Node to be deleted is the first node in the list
+				head = head->next;
+				delete tmp;
+			}
+			else if (tmp->next == nullptr) {
+				//Node to be deleted is the last node in the list
+				prev->next = nullptr;
+				delete tmp;
+			}
+			else {
+				//Node to be deleted is in the middle of the list
+				prev->next = tmp->next;
+				delete tmp;
+			}
+			return true;
+		}
+		prev = tmp;
+		tmp = tmp->next;
+	}
+
+	cout << "Node cannot be found in the list : " << val << endl;
+	return false;
+}
