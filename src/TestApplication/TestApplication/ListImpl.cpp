@@ -34,3 +34,16 @@ void ListImpl::Display() {
 
 	cout << endl;
 }
+
+void ListImpl::Reverse() {
+	ListNode *p = head;
+	ListNode *q = p,*r=nullptr;
+	while (q != nullptr) {
+		q = p->next;
+		p->next = r;
+		r = p;
+		p = q;
+	}
+
+	head = r;
+}
