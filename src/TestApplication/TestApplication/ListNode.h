@@ -14,20 +14,12 @@ public:
 		//Destructor
 	}
 
-	ListNode(const ListNode & l) {
-		//Copy Constructor
-	}
+	ListNode(const ListNode & l) = delete;
 
-	ListNode& operator=(const ListNode &l) {
-		//Assignment Oprerator
-	}
+	ListNode& operator=(const ListNode &l) = delete;
 
-	ListNode(ListNode && l) {
-		//Move Constructor
-	}
-
-	ListNode& operator=(ListNode &&l) {
-		//Move Assignment Operator
-	}
+	ListNode(ListNode && l) = delete;
+	ListNode& operator=(ListNode &&l) = delete;
+	
 
 };
