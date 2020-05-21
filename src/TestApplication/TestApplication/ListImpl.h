@@ -15,4 +15,7 @@ public:
 	void Insert(int val);
 	void Display();
 	void Reverse();
+	int ListSize();
+	bool DeleteNode(int val);
+	int FindMiddleOfList();
 };
