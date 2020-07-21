@@ -17,5 +17,4 @@ public:
 	void Reverse();
 	int ListSize();
 	bool DeleteNode(int val);
-	int FindMiddleOfList();
 };
